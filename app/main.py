@@ -1,7 +1,9 @@
 import streamlit as st
+import pickle5 as pickle
 import pandas as pd
-import pickle
+import plotly.graph_objects as go
 import numpy as np
+
 
 def get_data():
   data = pd.read_csv("data/data.csv")
