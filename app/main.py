@@ -54,8 +54,8 @@ def predictions(input_data):
     st.write("<span class='diagnosis diabetes'>Better Check To Doctor 🤒</span>", unsafe_allow_html=True)
     
   
-  st.write("Probability of No Diabetes : ", model.predict_proba(test_data)[0][0])
-  st.write("Probability of being Diabetes: ", model.predict_proba(test_data)[0][1])
+  st.write("Probability of No Diabetes: ", f"{probabilities[0]*100:.2f}%")
+  st.write("Probability of being Diabetes: ", f"{probabilities[1]*100:.2f}%")
   
   st.write("This app can assist medical professionals in making a diagnosis, but should not be used as a substitute for a professional diagnosis.")
 
