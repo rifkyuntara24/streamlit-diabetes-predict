@@ -52,7 +52,8 @@ def predictions(input_data):
     st.write("<span class='diagnosis no_diabetes'>You're Good 🥰</span>", unsafe_allow_html=True)
   else:
     st.write("<span class='diagnosis diabetes'>Better Check To Doctor 🤒</span>", unsafe_allow_html=True)
-    
+
+  probabilities = model.predict_proba(test_data)[0]
   
   st.write("Probability of No Diabetes: ", f"{probabilities[0]*100:.2f}%")
   st.write("Probability of being Diabetes: ", f"{probabilities[1]*100:.2f}%")
